@@ -23,6 +23,10 @@ def marking():
     print(content)
     marktask=input("Which one you want to mark as completed: ")
 
+
+
+
+
 while 1==1:
     ask=input("Please specifiy a command [list, add, mark,archive]: ")
     if ask==("list"):
