@@ -3,19 +3,18 @@ todolist.close()
 
 todolist=open("todolist.txt","r")
 tasks=todolist.readlines()
+todolist.close()
 
 def listing():
     print("You saved the following to-do items:")
     for n in range(len(tasks)):
         print(n+1, '.', tasks[n], sep='', end='')
-    todolist.close()
 
 def adding():
     add_item=input("Add an item: ")
     tasks.append("[ ] "+add_item+"\n")
     print("Item added")
     
-
 def marking():
     print("You saved the following to-do items:")
     for a in range(len(tasks)):
@@ -27,9 +26,25 @@ def marking():
             tasks[b] = "[X]" + tasks[b][3:]
             for n in range(len(tasks)):
                 print(n+1, '.', tasks[n], sep='', end='')
-            
         else:
             pass
+
+def archive():
+    for task in tasks:
+        if ("[x]") in task:
+            del task
+
+ask=input("Please specifiy a command [list, add, mark,archive]: ")
+if ask==("list"):
+    listing()
+elif ask==("add"):
+    adding()
+elif ask==("mark"):
+    marking()
+elif ask==("archive"):
+    archive()
+else:
+    exit()
 
 while 1==1:
     ask=input("Please specifiy a command [list, add, mark,archive]: ")
@@ -38,10 +53,11 @@ while 1==1:
     elif ask==("add"):
         adding()
     elif ask==("mark"):
-        marking()
+        print("ok")
     elif ask==("archive"):
         archive()
     else:
         todolist=open("todolist.txt","w")
         todolist.write(str(tasks))
         print("Goodbye!")
+        exit()
