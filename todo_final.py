@@ -53,7 +53,7 @@ while 1==1:
     elif ask==("add"):
         adding()
     elif ask==("mark"):
-        print("ok")
+        marking()
     elif ask==("archive"):
         archive()
     else:
