@@ -1,2 +1,3 @@
-.[ ] hello
-.[ ] szia
+[ ] hi
+[ ] hello
+[ ] szia

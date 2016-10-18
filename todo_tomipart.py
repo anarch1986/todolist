@@ -3,13 +3,12 @@ todolist.close()
 
 todolist=open("todolist.txt","r")
 tasks=todolist.readlines()
-print(tasks)
 
 def listing():
     todolist=open("todolist.txt","r")
     print("You saved the following to-do items:")
-    content=todolist.read()
-    print(content)
+    for n in range(len(tasks)):
+        print(n+1, '.', tasks[n], sep='', end='')
     todolist.close()
 
 def adding():
