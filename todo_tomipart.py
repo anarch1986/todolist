@@ -23,6 +23,11 @@ def marking():
     print(content)
     marktask=input("Which one you want to mark as completed: ")
 
+def archive():
+    for task in tasks:
+        if ("[x]") in task:
+            del task
+
 while 1==1:
     ask=input("Please specifiy a command [list, add, mark,archive]: ")
     if ask==("list"):
@@ -32,7 +37,7 @@ while 1==1:
     elif ask==("mark"):
         print("ok")
     elif ask==("archive"):
-        print("ok")
+        archive()
     else:
         print("Goodbye!")
         break
