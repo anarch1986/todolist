@@ -12,7 +12,7 @@ def listing():
 def adding():
     todolist=open("todolist.txt","a")
     add_item=input("Add an item: ")
-    todolist.write(str(szam+1)+".[ ] "+(add_item))
+    todolist.write(str(szam+1)+".[ ] "+(add_item)+"\n")
     todolist.close()
 
 
