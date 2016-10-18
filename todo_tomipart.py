@@ -1,6 +1,10 @@
 todolist=open("todolist.txt","a")
 todolist.close()
 
+todolist=open("todolist.txt","r")
+tasks=todolist.readlines()
+print(tasks)
+
 def listing():
     todolist=open("todolist.txt","r")
     print("You saved the following to-do items:")
@@ -11,7 +15,7 @@ def listing():
 def adding():
     todolist=open("todolist.txt","a")
     add_item=input("Add an item: ")
-    todolist.write(".[ ] "+(add_item)+"\n")
+    todolist.write("[ ] "+(add_item)+"\n")
     todolist.close()
 
 def marking():
@@ -23,9 +27,7 @@ def marking():
 
 
 
-todolist=open("todolist.txt","r")
-tasks=todolist.readlines()
-print(tasks)
+
 
 ask=input("Please specifiy a command [list, add, mark,archive]: ")
 if ask==("list"):
