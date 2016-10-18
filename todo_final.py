@@ -30,9 +30,12 @@ def marking():
         
 
 def archive():
+    global tasks 
+    task_ghost=[]
     for task in tasks:
-        if "[x]" in task:
-            tasks.remove(task)
+        if not "[x]" in task:
+            task_ghost.append(task)
+    tasks = task_ghost  
 
 ask=input("Please specifiy a command [list, add, mark,archive]: ")
 if ask==("list"):
