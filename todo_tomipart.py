@@ -31,29 +31,6 @@ def marking():
         else:
             pass
 
-
-<<<<<<< HEAD
-
-
-
-
-ask=input("Please specifiy a command [list, add, mark,archive]: ")
-if ask==("list"):
-    listing()
-elif ask==("add"):
-    adding()
-elif ask==("mark"):
-    marking()
-elif ask==("archive"):
-    print("ok")
-else:
-    exit()
-=======
-def archive():
-    for task in tasks:
-        if ("[x]") in task:
-            del task
-
 while 1==1:
     ask=input("Please specifiy a command [list, add, mark,archive]: ")
     if ask==("list"):
@@ -61,23 +38,10 @@ while 1==1:
     elif ask==("add"):
         adding()
     elif ask==("mark"):
-        print("ok")
+        marking()
     elif ask==("archive"):
         archive()
     else:
         todolist=open("todolist.txt","w")
         todolist.write(str(tasks))
         print("Goodbye!")
-<<<<<<< HEAD
-        break
-=======
-        break
->>>>>>> 19c4c8f01e3d1749b783ca03e5a01655fa0f2ed8
-
-
-    #
-    #fgjfd
-    #
-    #text_file=open("todolist.txt")
-    #text_file.write
->>>>>>> 3e65f6b5eb574beecb029556525108312628d5f1
