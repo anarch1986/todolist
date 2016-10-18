@@ -31,7 +31,7 @@ def marking():
 
 def archive():
     for task in tasks:
-        if ("[x]") in task:
+        if "[x]" in task:
             del task
 
 ask=input("Please specifiy a command [list, add, mark,archive]: ")
