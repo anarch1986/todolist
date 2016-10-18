@@ -14,7 +14,11 @@ def adding():
     add_item=input("Add an item: ")
     tasks.append("[ ] "+add_item+"\n")
     print("Item added")
-    
+
+def archive():
+    for task in tasks:
+        if ("[x]") in task:
+            del task
 
 def marking():
     print("You saved the following to-do items:")
