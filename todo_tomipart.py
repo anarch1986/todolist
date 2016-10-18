@@ -5,7 +5,6 @@ todolist=open("todolist.txt","r")
 tasks=todolist.readlines()
 
 def listing():
-    todolist=open("todolist.txt","r")
     print("You saved the following to-do items:")
     for n in range(len(tasks)):
         print(n+1, '.', tasks[n], sep='', end='')
@@ -18,11 +17,20 @@ def adding():
     todolist.close()
 
 def marking():
-    todolist=open("todolist.txt","r")
     print("You saved the following to-do items:")
-    content=todolist.read()
-    print(content)
+    for a in range(len(tasks)):
+        print(a+1, '.', tasks[a], sep='', end='')
     marktask=input("Which one you want to mark as completed: ")
+    
+    for b in range(len(tasks)):
+        if b+1 == int(marktask):
+            tasks[b] = "[X]" + tasks[b][3:]
+            for n in range(len(tasks)):
+                print(n+1, '.', tasks[n], sep='', end='')
+            
+        else:
+            pass
+
 
 
 
@@ -34,7 +42,7 @@ if ask==("list"):
 elif ask==("add"):
     adding()
 elif ask==("mark"):
-    print("ok")
+    marking()
 elif ask==("archive"):
     print("ok")
 else:
