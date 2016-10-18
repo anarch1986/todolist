@@ -16,7 +16,10 @@ def adding():
 
 def marking():
     todolist=open("todolist.txt","r")
-    marktask=input("Which task do you wish to mark? ")
+    print("You saved the following to-do items:")
+    content=todolist.read()
+    print(content)
+    marktask=input("Which one you want to mark as completed: ")
 
 
 
