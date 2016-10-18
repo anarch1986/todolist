@@ -23,6 +23,9 @@ def marking():
 
 
 
+todolist=open("todolist.txt","r")
+tasks=todolist.readlines()
+print(tasks)
 
 ask=input("Please specifiy a command [list, add, mark,archive]: ")
 if ask==("list"):
