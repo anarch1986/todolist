@@ -49,6 +49,7 @@ while 1==1:
         archive()
     else:
         todolist=open("todolist.txt","w")
-        todolist.write(str(tasks))
+        for i in tasks:
+            todolist.write(i)
         print("Goodbye!")
         exit()
