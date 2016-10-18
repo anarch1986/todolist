@@ -1,6 +1,5 @@
 todolist=open("todolist.txt","a")
 todolist.close()
-szam=0
 
 def listing():
     todolist=open("todolist.txt","r")
@@ -12,8 +11,13 @@ def listing():
 def adding():
     todolist=open("todolist.txt","a")
     add_item=input("Add an item: ")
-    todolist.write(str(szam+1)+".[ ] "+(add_item)+"\n")
+    todolist.write(".[ ] "+(add_item)+"\n")
     todolist.close()
+
+def marking():
+    todolist=open("todolist.txt","r")
+    marktask=input("Which task do you wish to mark? ")
+
 
 
 
