@@ -5,17 +5,16 @@ todolist=open("todolist.txt","r")
 tasks=todolist.readlines()
 
 def listing():
-    todolist=open("todolist.txt","r")
     print("You saved the following to-do items:")
     for n in range(len(tasks)):
         print(n+1, '.', tasks[n], sep='', end='')
     todolist.close()
 
 def adding():
-    todolist=open("todolist.txt","a")
     add_item=input("Add an item: ")
-    todolist.write("[ ] "+(add_item)+"\n")
-    todolist.close()
+    tasks.append("[ ]"+add_item+"\n")
+    print("Item added")
+    
 
 def marking():
     todolist=open("todolist.txt","r")
