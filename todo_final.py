@@ -37,18 +37,6 @@ def archive():
             task_ghost.append(task)
     tasks = task_ghost  
 
-ask=input("Please specifiy a command [list, add, mark,archive]: ")
-if ask==("list"):
-    listing()
-elif ask==("add"):
-    adding()
-elif ask==("mark"):
-    marking()
-elif ask==("archive"):
-    archive()
-else:
-    exit()
-
 while 1==1:
     ask=input("Please specifiy a command [list, add, mark,archive]: ")
     if ask==("list"):
