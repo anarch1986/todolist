@@ -14,16 +14,13 @@ def adding():
     add_item=input("Add an item: ")
     tasks.append("[ ] "+add_item+"\n")
     print("Item added")
-<<<<<<< HEAD
-    
-=======
+
 
 def archive():
     for task in tasks:
         if ("[x]") in task:
             del task
 
->>>>>>> da3e0549f91c6dfca504c0dad0dcd4d064ec2888
 def marking():
     print("You saved the following to-do items:")
     for a in range(len(tasks)):
@@ -69,4 +66,6 @@ while 1==1:
         todolist=open("todolist.txt","w")
         todolist.write(str(tasks))
         print("Goodbye!")
+
         exit()
+
