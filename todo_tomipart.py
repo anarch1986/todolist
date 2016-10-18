@@ -39,12 +39,7 @@ while 1==1:
     elif ask==("archive"):
         archive()
     else:
+        todolist=open("todolist.txt","w")
+        todolist.write(str(tasks))
         print("Goodbye!")
         break
-
-
-    #
-    #fgjfd
-    #
-    #text_file=open("todolist.txt")
-    #text_file.write
